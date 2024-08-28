@@ -2,6 +2,7 @@
 
 import React, { FormEvent, useState } from 'react'
 import studentsArr from '../studentArr';
+import Link from 'next/link';
 
 export default function AddStudents() {
 
@@ -32,12 +33,13 @@ export default function AddStudents() {
             </form>
             {
                 studentsArr.map(({ name, rNom }, i) => (
-                    <div key={i}>
+                    <div key={i} className='flex gap-2 bg-slate-400 rounded-full py-2 px-2 w-[95%] m-auto'>
                         <h1>Name: {name}</h1>
                         <h1>Roll Number:{rNom}</h1>
                     </div>
                 ))
             }
+            <Link href={"/"}>Back to Home</Link>
         </div>
     )
 }
