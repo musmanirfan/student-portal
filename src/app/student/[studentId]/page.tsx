@@ -1,7 +1,12 @@
 import React from 'react'
 
-export default function page({params}) {
+
+type studentIdType= {
+    params: {studentId: string};
+}
+
+export default function page({params:{studentId}}:studentIdType) {
   return (
-    <div>{params.studentId}</div>
+    <div>{studentId}</div>
   )
 }
