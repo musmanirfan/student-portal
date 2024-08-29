@@ -3,6 +3,6 @@ type studentArrType = {
     rNom: number | string;
 }
 
-const studentsArr: studentArrType[] = []
+let studentsArr: studentArrType[] = []
 
 export default studentsArr

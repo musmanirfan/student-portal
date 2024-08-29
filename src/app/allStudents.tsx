@@ -3,9 +3,11 @@
 import React, { useEffect, useState } from 'react'
 import studentsArr from './studentArr'
 import Link from 'next/link'
+import deleteTodo from './deleteTodo'
 
 export default function AllStudents() {
     const [print, setPrint] = useState(false)
+
 
     useEffect(() => {
         setPrint(true)
@@ -23,7 +25,7 @@ export default function AllStudents() {
                             </div>
                             <div className='flex gap-3'>
                                 <button className='border border-black w-20 py-1 rounded-full hover:scale-105 transition-all duration-300'>Edit</button>
-                                <button className='border border-black w-20 py-1 rounded-full hover:scale-105 transition-all duration-300'>Delete</button>
+                                <button className='border border-black w-20 py-1 rounded-full hover:scale-105 transition-all duration-300' onClick={()=>{deleteTodo(i)}}>Delete</button>
                             </div>
                         </div >
                     ))
